@@ -25,6 +25,27 @@ public class Arbol {
     }
 
     /**
+     * Verifica si una palabra está contenida en el árbol.
+     * 
+     * @param palabra Palabra a buscar.
+     * @return true si la palabra está contenida, false en caso contrario.
+     */
+    public boolean contains(String palabra) {
+        if (palabra == null || palabra.isEmpty()) {
+            return false;
+        }
+
+        char firstChar = palabra.charAt(0);
+        for (Node rootNode : roots) {
+            if (rootNode.getValue() == firstChar) {
+                return rootNode.contains(palabra, 1);
+            }
+        }
+
+        return false;
+    }
+
+    /**
      * Busca una raíz con el carácter dado o la crea si no existe.
      * 
      * @param firstChar Carácter inicial de la palabra.

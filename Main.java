@@ -5,7 +5,7 @@ public class Main {
         Arbol arbol = new Arbol();
         int opt = -2;
 
-        /*// Insertar palabras
+        // Insertar palabras
         arbol.add("celebridad");
         arbol.add("raiz");
         arbol.add("ramo");
@@ -31,10 +31,10 @@ public class Main {
         arbol.add("seguridad");
         arbol.add("narciso");
         arbol.add("nanosegundos");
-        arbol.add("cepillos"); */
+        arbol.add("cepillos"); 
 
 
-        do {
+        /*do {
             System.out.println("1. Insertar\n0. Salir");
             opt = ConsoleReader.readInteger();
 
@@ -48,9 +48,12 @@ public class Main {
             } else {
                 System.out.println("No.");
             }
-        } while (opt != 0);
+        } while (opt != 0); */
 
         // Imprimir el árbol
         arbol.printPreOrder();
+        System.out.println(arbol.contains("sacate"));
+        System.out.println(arbol.contains("cepillos"));
+        System.out.println(arbol.contains("ruben"));
     }
 }
